@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/laranja"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Spinner
+        android:id="@+id/spinner_devolucao_pessoa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+   <Spinner
+        style="@style/spinner_item"
+        android:id="@+id/spinner_devolucao_emprestimo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        
+    <ListView
+        android:id="@+id/listView_emprestados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

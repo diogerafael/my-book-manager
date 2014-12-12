@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    android:orientation="vertical" >
+    
+     <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:shrinkColumns="0,1"
+        android:orientation="horizontal"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgBtCadPessoa"
+                android:src="@drawable/ic_cad_pessoa256"
+                android:background="#ffff8822" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgCadLivro"
+                android:src="@drawable/ic_cad_book256"
+                android:background="#ff65ff49" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_weight="4"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgEmprestimo"
+                android:src="@drawable/ic_emprestimo"
+                android:background="#ff584aff" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgDevolucao"
+                android:src="@drawable/ic_devolver_256"
+                android:background="#ffff18cf" />
+        </TableRow>
+
+     
+    </TableLayout>
+
+</LinearLayout>

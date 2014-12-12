@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vermelho">#ff0000</color>
+    <color name="preto">#000000</color>
+    <color name="azul">#0000ff</color>
+    <color name="slateblue">#6A5ACD</color>
+    <color name="verde">#00080000</color>
+    <color name="salmon">#FA8072</color>
+    <color name="branco">#ffffff</color>
+    <color name="laranja">#ffff8822</color>
+  
+    
+</resources>

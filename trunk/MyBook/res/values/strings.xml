@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="app_name">MyBook</string>
+
+    <!-- cadastro -->
+    <string name="cad_pessoa">Cadastrar Pessoa</string>
+    <string name="cad_livro">Cadastrar Livro</string>
+    
+    <!-- form cadastro pessoa -->
+    <string name="cad_pessoa_nome">Nome</string>
+    <string name="cad_pessoa_telefone">Telefone</string>
+    <string name="cad_pessoa__foto">Foto</string>
+    <string name="cad_pessoa__email">Email</string>
+    
+    <!-- form cadastro livro -->
+    <string name="cad_livro_titulo">Titulo</string>
+    <string name="cad_livro_serie">Serie</string>
+    <string name="cad_livro_exemplares">Exemplares</string>
+    
+    <!-- form cadastro emprestimo -->
+    <string name="cad_emp_livro">Livro</string>
+    <string name="cad_emp_pessoa">Amigo</string>
+    <string name="cad_emp_dt_devolucao">Devolução</string>
+    
+    <!--  form cadastro confg -->
+    <string name="cad_confg_email">Enviar Email Lembrete</string>
+    <string name="cad_confg_texto_email">Texto do Lembrete</string>
+    <string name="cad_confg_sms">Enviar Sms Lembrete</string>
+    <string name="cad_confg_executar">Salvar</string>
+    
+    
+    <!-- botoes -->
+    <string name="bt_cadastrar">Cadastrar</string>
+    <string name="bt_emprestar">Emprestar</string>
+    <string name="bt_inserir">Inserir</string>
+    <string name="bt_foto">Tirar Foto</string>
+    
+</resources>

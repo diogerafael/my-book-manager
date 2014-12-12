@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="textViewLabelCad">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/preto</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:background">@color/azul</item>
+    </style>
+
+    <style name="listView">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:gravity">left</item>
+        <item name="android:shadowColor">@color/preto</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:padding">10dip</item>
+    </style>
+
+    <style name="listViewPessoa">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:gravity">left</item>
+        <item name="android:shadowColor">@color/branco</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:padding">10dip</item>
+    </style>
+
+    <style name="spinner_item">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:gravity">left</item>
+        <item name="android:shadowColor">@color/preto</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:padding">10dip</item>
+        
+    </style>
+
+    <style name="textViewCad">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/preto</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:background">@color/laranja</item>
+    </style>
+
+    <style name="btnStyleBlackpearl" parent="@android:style/Widget.Button">
+       <item name="android:textSize">15sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">#FFFFFF</item>
+       <item name="android:gravity">center</item>
+       <item name="android:shadowColor">#000000</item>
+       <item name="android:shadowDx">1</item>
+       <item name="android:shadowDy">1</item>
+       <item name="android:shadowRadius">0.6</item>
+       <item name="android:background">@drawable/custom_btn_black_pearl</item>
+       <item name="android:padding">10dip</item>
+   </style>
+    
+</resources>
