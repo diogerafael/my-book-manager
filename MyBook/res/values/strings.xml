@@ -28,6 +28,8 @@
     <string name="cad_confg_sms">Enviar Sms Lembrete</string>
     <string name="cad_confg_executar">Salvar</string>
     
+    <!-- form cad devolução -->
+    <string name="cad_devolucao_lancar">Lançar Devolução</string>
     
     <!-- botoes -->
     <string name="bt_cadastrar">Cadastrar</string>

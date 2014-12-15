@@ -115,9 +115,13 @@ public class Devolucao extends Activity implements OnItemLongClickListener,OnIte
 			// TODO Auto-generated method stub
 	    	this.emprestimo.getListaLivro().remove(this.livro);
 	    	//mudar o status na tabela
-	    	daoEmprestimo.deleteLivoEmprestimo(this.livro.getIdLivro(),this.emprestimo.getIdEmprestimo(),1);
+	    	daoEmprestimo.deleteLivoEmprestimo(this.livro.getIdLivro(),this.emprestimo.getIdEmprestimo(),0);
 	    	//carregando lista novamente
 	    	this.emprestimo.setListaLivro(daoLivro.listEmprestadosByEmprestimo(this.emprestimo.getIdEmprestimo()));
+	    	//verificando se a lista veio vazia e limpando o emprestimo da tela de devolução
+	    	if(this.emprestimo.getListaLivro().size()<=0){
+	    		this.daoEmprestimo.updateEmprestimo(this.emprestimo.getIdEmprestimo());
+	    	}
 	    	adapterLivro = new LivroAdapter(this, this.emprestimo.getListaLivro());
 	    	listViewLivro.setAdapter(adapterLivro);
 			

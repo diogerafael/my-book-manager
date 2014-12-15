@@ -231,8 +231,8 @@ public class Emprestimo extends Activity implements OnClickListener,OnItemSelect
 			}							
 		}
 		else if(v.getId() == btEmprestar.getId()){
-			if(listaModelEmprestimoHasLivros.size() <0){
-				PopUp.showPopupWindow(v, "Emprestimo", "", "OK");
+			if(listaModelEmprestimoHasLivros.size() <=0){
+				PopUp.showPopupWindow(v, "Emprestimo", "Inserir Livros no Emprestimo!", "OK");
 			}else if(listaModelEmprestimoHasLivros == null){
 				PopUp.showPopupWindow(v, "Emprestimo", "Definir Livro", "OK");
 			}
