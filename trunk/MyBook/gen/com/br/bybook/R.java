@@ -111,16 +111,19 @@ public final class R {
         public static final int app_name=0x7f060000;
         /**  botoes 
          */
-        public static final int bt_cadastrar=0x7f060011;
-        public static final int bt_emprestar=0x7f060012;
-        public static final int bt_foto=0x7f060014;
-        public static final int bt_inserir=0x7f060013;
+        public static final int bt_cadastrar=0x7f060012;
+        public static final int bt_emprestar=0x7f060013;
+        public static final int bt_foto=0x7f060015;
+        public static final int bt_inserir=0x7f060014;
         /**   form cadastro confg 
          */
         public static final int cad_confg_email=0x7f06000d;
         public static final int cad_confg_executar=0x7f060010;
         public static final int cad_confg_sms=0x7f06000f;
         public static final int cad_confg_texto_email=0x7f06000e;
+        /**  form cad devolução 
+         */
+        public static final int cad_devolucao_lancar=0x7f060011;
         public static final int cad_emp_dt_devolucao=0x7f06000c;
         /**  form cadastro emprestimo 
          */

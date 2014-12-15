@@ -133,7 +133,7 @@ public class EmprestimoDao extends AbstractDao implements InterfaceDao<Emprestim
 		List<Emprestimo> lista = new ArrayList<Emprestimo>();
 		try{//lendo redos da database
 			this.dataBase = this.openHelper.getReadableDatabase();
-			String sql = "SELECT * FROM " + table_name + " WHERE idPessoa = "+prIdPessoa;  
+			String sql = "SELECT * FROM " + table_name + " WHERE idPessoa = "+prIdPessoa +" and status=1";  
 		    String[] selectionArgs = new String[] {"idPessoa"};  
 		    Cursor cursor = this.dataBase.rawQuery(sql, null);
 			if (cursor.moveToNext()) {
@@ -175,6 +175,15 @@ public void deleteLivoEmprestimo(int prIdLivro,int prIdEmprestimo,int status){
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-	}
-	
+	}	
+
+public long updateEmprestimo(int prIdEmprestimo){
+	open();
+	String filter =  " idEmprestimo="+prIdEmprestimo;
+	ContentValues values = new ContentValues();
+	values.put("status", 0);
+	return this.dataBase.update(table_name, values, filter, null);
+	//return -1;
+}
+
 }
