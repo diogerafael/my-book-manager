@@ -3,10 +3,12 @@ package com.br.mybook;
 
 
 import com.br.bybook.R;
+import com.br.util.Notificacao;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.location.Criteria;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +40,8 @@ public class Principal extends Activity implements OnClickListener{
 	        setContentView(R.layout.principal);
 	        //chamando metodo que inicia os objetos da tela
 	        initObjects();
+	        //chamando notificação
+	        //startActivity(new Intent(this,Notificacao.class));
 	    }
 
 
