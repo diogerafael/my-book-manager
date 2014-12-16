@@ -9,26 +9,26 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:shrinkColumns="0,1"
-        android:orientation="horizontal"
-        >
+        android:stretchColumns="0,1"
+        android:orientation="horizontal">
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_weight="4"
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:id="@+id/imgBtCadPessoa"
                 android:src="@drawable/ic_cad_pessoa"
                 android:background="#ffff8822" />
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:id="@+id/imgCadLivro"
-                android:src="@drawable/ic_cad_book256"
+                android:src="@drawable/ic_cad_book"
                 android:background="#ff65ff49" />
         </TableRow>
 

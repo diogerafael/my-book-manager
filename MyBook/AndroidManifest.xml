@@ -41,6 +41,7 @@
        <activity android:name="com.br.mybook.Emprestimo" android:screenOrientation="portrait"></activity>
        <activity android:name="com.br.mybook.Devolucao" android:screenOrientation="portrait"></activity>
        <activity android:name="com.br.mybook.Configuracao" android:screenOrientation="portrait"></activity>
+       <activity android:name="com.br.util.Notificacao" />
     </application>
 
 </manifest>
