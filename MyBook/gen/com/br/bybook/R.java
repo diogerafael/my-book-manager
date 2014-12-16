@@ -23,16 +23,19 @@ public final class R {
     public static final class drawable {
         public static final int action_button=0x7f020000;
         public static final int custom_btn_black_pearl=0x7f020001;
-        public static final int ic_cad_book256=0x7f020002;
-        public static final int ic_cad_pessoa256=0x7f020003;
-        public static final int ic_device_camera_capture_photo_128=0x7f020004;
-        public static final int ic_device_camera_capture_photo_64=0x7f020005;
-        public static final int ic_devolver_256=0x7f020006;
-        public static final int ic_emprestimo=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int pop_window_background=0x7f020009;
-        public static final int rounded_edittext=0x7f02000a;
-        public static final int shape_list_view=0x7f02000b;
+        public static final int ic_cad_book=0x7f020002;
+        public static final int ic_cad_book256=0x7f020003;
+        public static final int ic_cad_pessoa=0x7f020004;
+        public static final int ic_cad_pessoa256=0x7f020005;
+        public static final int ic_device_camera_capture_photo_128=0x7f020006;
+        public static final int ic_device_camera_capture_photo_64=0x7f020007;
+        public static final int ic_devolver=0x7f020008;
+        public static final int ic_devolver_256=0x7f020009;
+        public static final int ic_emprestimo=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int pop_window_background=0x7f02000c;
+        public static final int rounded_edittext=0x7f02000d;
+        public static final int shape_list_view=0x7f02000e;
     }
     public static final class id {
         public static final int btAddLivro=0x7f080020;
@@ -52,13 +55,9 @@ public final class R {
         public static final int editTelefone=0x7f080010;
         public static final int editTextoConfig=0x7f080018;
         public static final int editTitulo=0x7f080003;
-        public static final int editar=0x7f080032;
+        public static final int editar=0x7f08002e;
         public static final int foto_livro=0x7f080000;
         public static final int foto_pessoa=0x7f080009;
-        public static final int imageButton1=0x7f08002e;
-        public static final int imageButton2=0x7f08002f;
-        public static final int imageButton3=0x7f080030;
-        public static final int imageButton4=0x7f080031;
         public static final int imgBtCadPessoa=0x7f08002a;
         public static final int imgCadLivro=0x7f08002b;
         public static final int imgDevolucao=0x7f08002d;
@@ -71,7 +70,7 @@ public final class R {
         public static final int listViewCadPessoa=0x7f080015;
         public static final int listViewEmprestimo=0x7f080022;
         public static final int listView_emprestados=0x7f08001c;
-        public static final int remover=0x7f080033;
+        public static final int remover=0x7f08002f;
         public static final int scrollView1=0x7f08000b;
         public static final int spinner_devolucao_emprestimo=0x7f08001b;
         public static final int spinner_devolucao_pessoa=0x7f08001a;
@@ -100,8 +99,7 @@ public final class R {
         public static final int item_lis_pessoa=0x7f030008;
         public static final int popup_window=0x7f030009;
         public static final int principal=0x7f03000a;
-        public static final int principal2=0x7f03000b;
-        public static final int tem_lis_emprestimo_lista=0x7f03000c;
+        public static final int tem_lis_emprestimo_lista=0x7f03000b;
     }
     public static final class menu {
         public static final int menu_context=0x7f070000;

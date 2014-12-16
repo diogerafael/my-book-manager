@@ -1,11 +1,15 @@
 package com.br.dao;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 
 import com.br.bd.DBHelper;
+import com.br.model.Emprestimo;
 import com.br.model.Emprestimo_has_Livros;
 
 public class Emprestimo_has_LivrosDao extends AbstractDao implements InterfaceDao<Emprestimo_has_Livros>{
@@ -61,5 +65,46 @@ public class Emprestimo_has_LivrosDao extends AbstractDao implements InterfaceDa
 		return null;
 	}
 
-	
+	public List<Emprestimo_has_Livros> list(int prIdPessoa,int prEmprestimo) {
+		PessoaDao daoPessoa = new PessoaDao(context);	
+		LivroDao daoLivro = new LivroDao(context);
+		EmprestimoDao daoEmprestimo = new EmprestimoDao(context);
+		List<Emprestimo_has_Livros> lista = new ArrayList<Emprestimo_has_Livros>();
+		try{//lendo redos da database
+			this.dataBase = this.openHelper.getReadableDatabase();
+			String sql ="SELECT * FROM Emprestimo e inner join "
+			+table_name+" el on (e.idEmprestimo=el.idEmprestimo) where (e.idPessoa="+prIdPessoa +") and (el.status =1) and (el.idEmprestimo ="+prEmprestimo+")";			 
+		    String[] selectionArgs = new String[] {"idPessoa"};  
+		    Cursor cursor = this.dataBase.rawQuery(sql, null);
+			if (cursor.moveToFirst()) {
+                do {
+                    		Emprestimo_has_Livros modelo = new Emprestimo_has_Livros();		
+                    		//Emprestimo entidade = new Emprestimo();
+                            modelo.setEmprestimo(daoEmprestimo.getEntidade(cursor.getInt(cursor.getColumnIndex("idEmprestimo"))));
+                            //setando o livro
+                            modelo.setLivro(daoLivro.getEntidade(cursor.getInt(cursor.getColumnIndex("idLivro"))));
+                            //pegando a data da devolucao
+                            long data = cursor.getLong(cursor.getColumnIndex("dataDevolucao"));
+                            Date d = new Date(data);
+                            modelo.setDataDevolucao(d);
+                            //pegando a data 
+                            long data2 = cursor.getLong(cursor.getColumnIndex("dataDevolvido"));
+                            Date d2 = new Date(data);
+                            modelo.setDataDevolvido(d2);                            
+                            modelo.setStatus(cursor.getInt(cursor.getColumnIndex("status")));
+                            
+                    lista.add(modelo);
+
+                } while (cursor.moveToNext());
+            }
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+            return lista;
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return lista;
+	}
 }

@@ -209,7 +209,7 @@ public class Cadastro_Pessoal extends Activity implements OnClickListener,
 				PopUp.showPopupWindow(v, "Cadastro Usuário", "Usuário Cadastrado com Sucesso", "OK");
 			} else if (this.btCadastrarPessoa.getText().toString()
 					.equals("Editar")) {
-				pessoa.setFoto(imageFile.getAbsolutePath());
+				pessoa.setFoto(imageFile.getName());
 				pessoa.setEmail(edtEmail.getText().toString());
 				pessoa.setNome(edtNome.getText().toString());
 				pessoa.setTelefone(edtTelefone.getText().toString());

@@ -1,13 +1,13 @@
 package com.br.adapter;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
-
 import com.br.adapter.EmprestimoAdapter.ViewHolder;
 import com.br.bybook.R;
 import com.br.model.Emprestimo;
 import com.br.model.Emprestimo_has_Livros;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class EmprestimoHasLivrosAdapter extends BaseAdapter{
+@SuppressLint("ResourceAsColor") public class EmprestimoHasLivrosAdapter extends BaseAdapter{
 
 	private List<Emprestimo_has_Livros> lista;
 	private LayoutInflater mInflater;
@@ -59,7 +59,7 @@ public class EmprestimoHasLivrosAdapter extends BaseAdapter{
 
 
 
-	@Override
+	@Override                               
 	public View getView(int posicao, View convertView, ViewGroup arg2) {
 		if(convertView == null){
 			convertView = mInflater.inflate(R.layout.tem_lis_emprestimo_lista, null);
@@ -70,13 +70,16 @@ public class EmprestimoHasLivrosAdapter extends BaseAdapter{
 
 		} else {
 			holder = (ViewHolder) convertView.getTag();
-		}
+		}  
 		com.br.model.Emprestimo_has_Livros e = this.lista.get(posicao);
 
 		holder.tvLivro.setText(e.getLivro().getDescricao());
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 		String data = format.format(e.getDataDevolucao());
 		holder.tvDataDevolucao.setText(data);
+		if(e.getDataDevolucao().after(new Date())){
+			convertView.setBackgroundColor(R.color.vermelho);
+		}
 
 		return convertView;
 
