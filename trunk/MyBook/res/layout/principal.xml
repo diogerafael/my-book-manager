@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:id="@+id/imgBtCadPessoa"
-                android:src="@drawable/ic_cad_pessoa256"
+                android:src="@drawable/ic_cad_pessoa"
                 android:background="#ffff8822" />
 
             <ImageButton
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:id="@+id/imgDevolucao"
-                android:src="@drawable/ic_devolver_256"
+                android:src="@drawable/ic_devolver"
                 android:background="#ffff18cf" />
         </TableRow>
 

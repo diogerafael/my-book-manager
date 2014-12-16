@@ -1,6 +1,6 @@
 package com.br.mybook;
 
-import java.text.BreakIterator;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,7 +29,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -220,9 +219,14 @@ public class Emprestimo extends Activity implements OnClickListener,OnItemSelect
 				String data = editDataDevolucao.getText().toString();
 				SimpleDateFormat format  = new SimpleDateFormat("dd/MM/yyyy");
 				try {
+					if(format.parse(data).before(new Date())){
+						PopUp.showPopupWindow(v, "Emprestimo", "Data de Devolução Inferior da Data de Emprestimo", "OK");
+						return;
+					}
 					modelEmprestimoHasLivros.setDataDevolucao(format.parse(data));
 				} catch (ParseException e1){
-					e1.printStackTrace();
+					PopUp.showPopupWindow(v, "Emprestimo", "Inserir Data no Padrão dd/MM/yyyy", "OK");
+					return;
 				}
 				modelEmprestimoHasLivros.setStatus(1);
 				listaModelEmprestimoHasLivros.add(modelEmprestimoHasLivros);
@@ -250,7 +254,11 @@ public class Emprestimo extends Activity implements OnClickListener,OnItemSelect
 					listaModelEmprestimoHasLivros.get(i).setEmprestimo(this.emprestimoLivro);
 					daoEmprestimoHasLivro.save(listaModelEmprestimoHasLivros.get(i));
 				}
-			}			
+				listaModelEmprestimoHasLivros = new ArrayList<Emprestimo_has_Livros>();
+				listViewEmprestimo.setAdapter(null);
+			}
+			
+			PopUp.showPopupWindow(v, "Emprestimo", "Emprestimo Efetuado com Sucesso", "OK");
 		}
 	}
 

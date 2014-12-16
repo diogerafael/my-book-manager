@@ -254,7 +254,7 @@ public class Cadastro_Livro extends Activity implements OnClickListener,OnItemLo
 				PopUp.showPopupWindow(v, "Cadastro Livro", "Livro Cadastrado com Sucesso", "OK");
 			}
 			else if	(this.btCadLivro.getText().toString().equals("Editar")) {
-				livro.setFoto("");//pegar caminho a ser salvo
+				livro.setFoto(this.imageFile.getName());//pegar caminho a ser salvo
 				livro.setDescricao(edtDescricao.getText().toString());
 				livro.setSerie(edtSerie.getText().toString());
 				livro.setQuantidade(Integer.parseInt(edtQtd.getText().toString()));

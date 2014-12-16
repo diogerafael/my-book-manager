@@ -107,12 +107,12 @@ public class EmprestimoDao extends AbstractDao implements InterfaceDao<Emprestim
 			Cursor cursor = this.dataBase.query(table_name,colunas,null, null, null, null, null);
 			if (cursor.moveToFirst()) {               
 							entidade = new Emprestimo();
-                            entidade.setIdEmprestimo(cursor.getInt(cursor.getColumnIndex(colunas[0])));
-                    		//verificar
-                            //entidade.setData(cursor.get (cursor.getColumnIndex(colunas[1])));
-                    		//entidade.getPessoa().setIdPessoa(cursor.getInt(cursor.getColumnIndex(colunas[2])));
+                            entidade.setIdEmprestimo(cursor.getInt(cursor.getColumnIndex(colunas[0])));                    		
                     		entidade.setPessoa(daoPessoa.getEntidade(cursor.getInt(cursor.getColumnIndex(colunas[2]))));
-                            //                   		
+                            //pegando a data
+                    		long data = cursor.getLong(cursor.getColumnIndex(colunas[1]));
+                    		Date d = new Date(data);
+                            entidade.setData(d);               		
                     		entidade.setStatus(cursor.getString(cursor.getColumnIndex(colunas[3])).charAt(0));                    		                    
 
                 }
@@ -140,9 +140,10 @@ public class EmprestimoDao extends AbstractDao implements InterfaceDao<Emprestim
                 do {
                     		Emprestimo entidade = new Emprestimo();
                             entidade.setIdEmprestimo(cursor.getInt(cursor.getColumnIndex(colunas[0])));
-                            entidade.setIdEmprestimo(cursor.getInt(cursor.getColumnIndex(colunas[0])));
+                           // entidade.setIdEmprestimo(cursor.getInt(cursor.getColumnIndex(colunas[0])));
                             long data = cursor.getLong(cursor.getColumnIndex(colunas[1]));
-                            entidade.setData(new Date(data));
+                            Date d = new Date(data);
+                            entidade.setData(d);
                     		entidade.setPessoa(daoPessoa.getEntidade(cursor.getInt(cursor.getColumnIndex(colunas[2]))));             		
                     		entidade.setStatus(cursor.getInt(cursor.getColumnIndex(colunas[3])));                    		                   		
                     lista.add(entidade);
@@ -159,6 +160,9 @@ public class EmprestimoDao extends AbstractDao implements InterfaceDao<Emprestim
 		}
 		return lista;
 	}
+	
+	
+	
 
 	//metodo que muda o status de um livro de um emprestimo
 	public void updateStatusLivoEmprestimo(int prIdLivro,int prIdEmprestimo){
