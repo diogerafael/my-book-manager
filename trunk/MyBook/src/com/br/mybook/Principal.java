@@ -3,7 +3,7 @@ package com.br.mybook;
 
 
 import com.br.bybook.R;
-import com.br.util.Notificacao;
+
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -29,6 +29,7 @@ public class Principal extends Activity implements OnClickListener{
 	private ImageButton imgCadLivro;
 	private ImageButton imgEmprestimo;
 	private ImageButton imgDevolucao;
+    private String teste="";
 	
 	private Intent intent;
 	
@@ -40,7 +41,7 @@ public class Principal extends Activity implements OnClickListener{
 	        setContentView(R.layout.principal);
 	        //chamando metodo que inicia os objetos da tela
 	        initObjects();
-	        //chamando notificação
+	        //chamando notificaï¿½ï¿½o
 	        //startActivity(new Intent(this,Notificacao.class));
 	    }
 
@@ -100,19 +101,19 @@ public class Principal extends Activity implements OnClickListener{
             //cria o menu
             MenuItem menuSair = menu.add(iSair,0, 0, "Sair");
             MenuItem menuSobre = menu.add(iSair, 1, 0, "Sobre");
-            MenuItem menuConfig = menu.add(iSair, 2, 0, "Configuração");
+            MenuItem menuConfig = menu.add(iSair, 2, 0, "Configuraï¿½ï¿½o");
             }  catch (Exception e) {
                   e.printStackTrace();
                 }
                return super.onCreateOptionsMenu(menu);
     }
    
-    //o método abaixo é disparado quando o usuário clicar
+    //o mï¿½todo abaixo ï¿½ disparado quando o usuï¿½rio clicar
         //em algum dos itens do menu
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
-            //de acordo com o item selecionado você executará
-            //a função desejada
+            //de acordo com o item selecionado vocï¿½ executarï¿½
+            //a funï¿½ï¿½o desejada
             switch (item.getItemId()) {
                 case 0:    
                     finish();
@@ -135,7 +136,7 @@ public class Principal extends Activity implements OnClickListener{
         public void chamaDialogSobreSistema(){
             AlertDialog alertDialog = new AlertDialog.Builder(this).create();
             alertDialog.setTitle("Sobre");
-            alertDialog.setMessage("Sistema Desenvolvido por Diógenes Rafael");                      
+            alertDialog.setMessage("Sistema Desenvolvido por Diï¿½genes Rafael");                      
             alertDialog.show();
         }
         /**************************************************/
